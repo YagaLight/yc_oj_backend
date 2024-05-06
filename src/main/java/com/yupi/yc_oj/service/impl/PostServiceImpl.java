@@ -3,7 +3,7 @@ package com.yupi.yc_oj.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yupi.yc_oj.config.common.ErrorCode;
+import com.yupi.yc_oj.common.ErrorCode;
 import com.yupi.yc_oj.constant.CommonConstant;
 import com.yupi.yc_oj.exception.BusinessException;
 import com.yupi.yc_oj.exception.ThrowUtils;

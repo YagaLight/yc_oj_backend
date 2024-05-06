@@ -4,7 +4,7 @@ import cn.hutool.core.collection.CollUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yupi.yc_oj.config.common.ErrorCode;
+import com.yupi.yc_oj.common.ErrorCode;
 import com.yupi.yc_oj.constant.CommonConstant;
 import com.yupi.yc_oj.exception.BusinessException;
 import com.yupi.yc_oj.exception.ThrowUtils;
@@ -171,26 +171,6 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
         Set<Long> userIdSet = questionList.stream().map(Question::getUserId).collect(Collectors.toSet());
         Map<Long, List<User>> userIdUserListMap = userService.listByIds(userIdSet).stream()
                 .collect(Collectors.groupingBy(User::getId));
-//        // 2. 已登录，获取用户点赞、收藏状态
-//        Map<Long, Boolean> questionIdHasThumbMap = new HashMap<>();
-//        Map<Long, Boolean> questionIdHasFavourMap = new HashMap<>();
-//        User loginUser = userService.getLoginUserPermitNull(request);
-//        if (loginUser != null) {
-//            Set<Long> questionIdSet = questionList.stream().map(Question::getId).collect(Collectors.toSet());
-//            loginUser = userService.getLoginUser(request);
-//            // 获取点赞
-//            QueryWrapper<QuestionThumb> questionThumbQueryWrapper = new QueryWrapper<>();
-//            questionThumbQueryWrapper.in("questionId", questionIdSet);
-//            questionThumbQueryWrapper.eq("userId", loginUser.getId());
-//            List<QuestionThumb> questionQuestionThumbList = questionThumbMapper.selectList(questionThumbQueryWrapper);
-//            questionQuestionThumbList.forEach(questionQuestionThumb -> questionIdHasThumbMap.put(questionQuestionThumb.getQuestionId(), true));
-//            // 获取收藏
-//            QueryWrapper<QuestionFavour> questionFavourQueryWrapper = new QueryWrapper<>();
-//            questionFavourQueryWrapper.in("questionId", questionIdSet);
-//            questionFavourQueryWrapper.eq("userId", loginUser.getId());
-//            List<QuestionFavour> questionFavourList = questionFavourMapper.selectList(questionFavourQueryWrapper);
-//            questionFavourList.forEach(questionFavour -> questionIdHasFavourMap.put(questionFavour.getQuestionId(), true));
-//        }
         // 填充信息
         List<QuestionVO> questionVOList = questionList.stream().map(question -> {
             QuestionVO questionVO = QuestionVO.objToVo(question);
@@ -200,8 +180,6 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
                 user = userIdUserListMap.get(userId).get(0);
             }
             questionVO.setUserVO(userService.getUserVO(user));
-//            questionVO.setHasThumb(questionIdHasThumbMap.getOrDefault(question.getId(), false));
-//            questionVO.setHasFavour(questionIdHasFavourMap.getOrDefault(question.getId(), false));
             return questionVO;
         }).collect(Collectors.toList());
         questionVOPage.setRecords(questionVOList);

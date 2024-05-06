@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yupi.yc_oj.config.common.ErrorCode;
+import com.yupi.yc_oj.common.ErrorCode;
 import com.yupi.yc_oj.exception.BusinessException;
 import com.yupi.yc_oj.mapper.PostFavourMapper;
 import com.yupi.yc_oj.model.entity.Post;

@@ -1,25 +1,36 @@
-package com.yupi.yc_oj.model.dto.postfavour;
+package com.yupi.yc_oj.model.dto.questionsubmit;
 
 import com.yupi.yc_oj.common.PageRequest;
-import com.yupi.yc_oj.model.dto.post.PostQueryRequest;
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
+
 /**
- * 帖子收藏查询请求
+ * 查询请求
  *
  * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class PostFavourQueryRequest extends PageRequest implements Serializable {
+public class QuestionSubmitQueryRequest extends PageRequest implements Serializable {
 
     /**
-     * 帖子查询请求
+     * 编程语言
      */
-    private PostQueryRequest postQueryRequest;
+    private String language;
+
+    /**
+     * 提交状态
+     */
+    private Integer status;
+
+    /**
+     * 题目 id
+     */
+    private Long questionId;
+
 
     /**
      * 用户 id

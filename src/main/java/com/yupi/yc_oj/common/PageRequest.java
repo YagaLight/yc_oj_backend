@@ -1,4 +1,4 @@
-package com.yupi.yc_oj.config.common;
+package com.yupi.yc_oj.common;
 
 import com.yupi.yc_oj.constant.CommonConstant;
 import lombok.Data;

@@ -1,14 +1,11 @@
 package com.yupi.yc_oj.model.dto.question;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.yupi.yc_oj.config.common.PageRequest;
+import com.yupi.yc_oj.common.PageRequest;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 /**

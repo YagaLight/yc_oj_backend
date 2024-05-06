@@ -2,7 +2,7 @@ package com.yupi.yc_oj.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yupi.yc_oj.config.common.ErrorCode;
+import com.yupi.yc_oj.common.ErrorCode;
 import com.yupi.yc_oj.exception.BusinessException;
 import com.yupi.yc_oj.mapper.PostThumbMapper;
 import com.yupi.yc_oj.model.entity.Post;

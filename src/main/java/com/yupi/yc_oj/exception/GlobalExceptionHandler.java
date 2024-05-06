@@ -1,8 +1,8 @@
 package com.yupi.yc_oj.exception;
 
-import com.yupi.yc_oj.config.common.BaseResponse;
-import com.yupi.yc_oj.config.common.ErrorCode;
-import com.yupi.yc_oj.config.common.ResultUtils;
+import com.yupi.yc_oj.common.BaseResponse;
+import com.yupi.yc_oj.common.ErrorCode;
+import com.yupi.yc_oj.common.ResultUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

@@ -1,6 +1,6 @@
 package com.yupi.yc_oj.exception;
 
-import com.yupi.yc_oj.config.common.ErrorCode;
+import com.yupi.yc_oj.common.ErrorCode;
 
 /**
  * 自定义异常类

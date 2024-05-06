@@ -1,8 +1,8 @@
 package com.yupi.yc_oj.controller;
 
-import com.yupi.yc_oj.config.common.BaseResponse;
-import com.yupi.yc_oj.config.common.ErrorCode;
-import com.yupi.yc_oj.config.common.ResultUtils;
+import com.yupi.yc_oj.common.BaseResponse;
+import com.yupi.yc_oj.common.ErrorCode;
+import com.yupi.yc_oj.common.ResultUtils;
 import com.yupi.yc_oj.exception.BusinessException;
 import com.yupi.yc_oj.model.dto.postthumb.PostThumbAddRequest;
 import com.yupi.yc_oj.model.entity.User;

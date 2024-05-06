@@ -1,6 +1,6 @@
 package com.yupi.yc_oj.model.dto.user;
 
-import com.yupi.yc_oj.config.common.PageRequest;
+import com.yupi.yc_oj.common.PageRequest;
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

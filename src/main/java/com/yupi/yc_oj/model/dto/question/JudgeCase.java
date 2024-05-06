@@ -16,7 +16,7 @@ public class JudgeCase {
     private String input;
 
     /**
-     * 输出时间
+     * 输出用例
      */
     private String output;
 }

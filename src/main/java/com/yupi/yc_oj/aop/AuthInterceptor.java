@@ -1,7 +1,7 @@
 package com.yupi.yc_oj.aop;
 
 import com.yupi.yc_oj.annotation.AuthCheck;
-import com.yupi.yc_oj.config.common.ErrorCode;
+import com.yupi.yc_oj.common.ErrorCode;
 import com.yupi.yc_oj.exception.BusinessException;
 import com.yupi.yc_oj.model.entity.User;
 import com.yupi.yc_oj.model.enums.UserRoleEnum;

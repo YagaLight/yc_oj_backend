@@ -1,4 +1,4 @@
-package com.yupi.yc_oj.config.common;
+package com.yupi.yc_oj.common;
 
 import java.io.Serializable;
 import lombok.Data;
